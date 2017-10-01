@@ -16,6 +16,7 @@
 		2807D5A11F80489B007AC0AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2807D5A01F80489B007AC0AE /* CoreLocation.framework */; };
 		2807D5A31F8048A2007AC0AE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2807D5A21F8048A2007AC0AE /* MapKit.framework */; };
 		2807D5A61F805213007AC0AE /* NLLocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807D5A51F805213007AC0AE /* NLLocationService.m */; };
+		2807D5A91F81821C007AC0AE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807D5A81F81821C007AC0AE /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		2807D5A21F8048A2007AC0AE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2807D5A41F805213007AC0AE /* NLLocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLLocationService.h; sourceTree = "<group>"; };
 		2807D5A51F805213007AC0AE /* NLLocationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLLocationService.m; sourceTree = "<group>"; };
+		2807D5A71F81821C007AC0AE /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2807D5A81F81821C007AC0AE /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				2807D58C1F804628007AC0AE /* ViewController.h */,
 				2807D58D1F804628007AC0AE /* ViewController.m */,
 				2807D58F1F804628007AC0AE /* Main.storyboard */,
+				2807D5A71F81821C007AC0AE /* MapViewController.h */,
+				2807D5A81F81821C007AC0AE /* MapViewController.m */,
 				2807D5921F804628007AC0AE /* Assets.xcassets */,
 				2807D5941F804628007AC0AE /* LaunchScreen.storyboard */,
 				2807D5971F804628007AC0AE /* Info.plist */,
@@ -170,6 +175,7 @@
 			files = (
 				2807D58E1F804628007AC0AE /* ViewController.m in Sources */,
 				2807D5991F804628007AC0AE /* main.m in Sources */,
+				2807D5A91F81821C007AC0AE /* MapViewController.m in Sources */,
 				2807D5A61F805213007AC0AE /* NLLocationService.m in Sources */,
 				2807D58B1F804628007AC0AE /* AppDelegate.m in Sources */,
 			);

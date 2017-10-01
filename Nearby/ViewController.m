@@ -12,6 +12,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "MapViewController.h"
 #import "NLLocationService.h"
 
 @interface ViewController ()
@@ -96,6 +97,19 @@
     cell.textLabel.text = [self cellLabelForIndex:indexPath.row];
     cell.detailTextLabel.text = [self cellDetailLabelForIndex:indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"Map" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if (![segue.identifier isEqualToString:@"Map"]) {
+        return;
+    }
+    
+    MapViewController *controller = (MapViewController *)segue.destinationViewController;
+    controller.placemarks = self.pointsOfInterest;
 }
 
 - (NSString *)cellLabelForIndex:(NSInteger)index {
