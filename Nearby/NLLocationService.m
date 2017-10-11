@@ -14,7 +14,7 @@ NSString * const kNLLocationServiceDidUpdatePointsOfInterestKey = @"mapItems";
 
 
 @interface NLLocationService()
-
+@property (nonatomic) NSDate *lastSearchTime;
 @end
 
 @implementation NLLocationService
@@ -69,6 +69,13 @@ NSString * const kNLLocationServiceDidUpdatePointsOfInterestKey = @"mapItems";
 }
 
 - (void)searchWithCompletion:(void (^)(NSArray<CLPlacemark *> *))completion {
+    NSDate *searchTime = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval fiveMinutes = 60 * 5;
+    if (self.lastSearchTime && [searchTime timeIntervalSinceDate:self.lastSearchTime] <= fiveMinutes) {
+        return;
+    }
+    self.lastSearchTime = searchTime;
+    
     id categories = @[@"electronics", @"clothing", @"restaurants", @"movies"];
 
     __block NSInteger totalRequests = [categories count];
